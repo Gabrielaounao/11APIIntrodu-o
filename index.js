@@ -1,7 +1,7 @@
 //index.js
+import express from "express";   
 import dotenv from "dotenv";
-dotenv.config();
-import express from "express";      // Requisição do pacote do express
+dotenv.config();   // Requisição do pacote do express
 import { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario } from "./bd.js";
 
 const app = express();              // Instancia o Express
