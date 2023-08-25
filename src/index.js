@@ -1,15 +1,16 @@
 //index.js
-import express from "express";   
 import dotenv from "dotenv";
+dotenv.config();
+
+import express from "express";   
 import roteadorUsuario from "./routes/usuario.js";
 import loginRouter from "./routes/login.js";
-
-dotenv.config();   // Requisição do pacote do express
 
 const app = express();              // Instancia o Express
 const port = 3000;                  // Define a porta
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(roteadorUsuario);
 app.use(loginRouter);
 
